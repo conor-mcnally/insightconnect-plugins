@@ -60,4 +60,4 @@ class Connection(insightconnect_plugin_runtime.Connection):
             raise ConnectionTestException(f"Connectivity test to InsightVM Console failed: {test_result.message}")
         else:
             self.logger.info("Connectivity test to InsightVM Console passed")
-            return
+            return {"success": True}
