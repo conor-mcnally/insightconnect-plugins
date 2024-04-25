@@ -14,5 +14,6 @@ class Encode(insightconnect_plugin_runtime.Action):
 
     def run(self, params={}):
         string = params[Input.CONTENT].encode("utf-8")
+        test test test
         result = base64.standard_b64encode(string)
         return {Output.DATA: result.decode("utf-8")}
